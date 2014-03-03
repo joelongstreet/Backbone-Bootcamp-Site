@@ -14,14 +14,21 @@ html,
 body {
   height: 100%;
 }
+.slide {
+  z-index: 2;
+  position: relative;
+}
 #section-1 {
   height: 100%;
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;
   background-color: #207178;
+  background-attachment: fixed;
 }
 #section-1 .flex {
+  position: fixed;
   width: 80%;
+  left: 10%;
   height: 100%;
   margin: auto;
   display: -webkit-box;
@@ -76,6 +83,41 @@ body {
 }
 #section-2 {
   background-color: #f5e9be;
+  padding: 50px 0;
+}
+#section-2 .flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+#section-2 h2 {
+  width: 80%;
+  margin-left: 20%;
+  margin-bottom: 25px;
+  font-family: 'Droid Serif', 'Georgia', 'Times New Roman', serif;
+  color: #207178;
+  font-size: 2.5em;
+}
+#section-2 h2 .emphasize {
+  font-size: 2em;
+  color: #ff9666;
+  font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+#section-2 p {
+  color: #ff9666;
+  font-family: 'Inconsolata', 'Monaco', monospace;
+  font-size: 2em;
+  margin-left: 30%;
 }
 #section-3 {
   background-image: url("img/paper-texture.png");

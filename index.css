@@ -10,10 +10,69 @@ li {
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  height: 100%;
+}
 #section-1 {
+  height: 100%;
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;
   background-color: #207178;
+}
+#section-1 .flex {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+#section-1 header {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -o-box-flex: 3;
+  -ms-box-flex: 3;
+  box-flex: 3;
+  -webkit-flex-grow: 3;
+  flex-grow: 3;
+}
+#section-1 header:first-child {
+  text-align: right;
+}
+#section-1 header,
+#section-1 .backbone {
+  margin: auto;
+  width: 300px;
+}
+#section-1 .backbone {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 80%;
+}
+#section-1 .backbone .container {
+  background-color: #174c4f;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+#section-1 h1 {
+  font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
+  color: #ffe184;
+  text-transform: uppercase;
+  font-size: 5em;
+}
+#section-1 h2 {
+  font-family: 'Inconsolata', 'Monaco', monospace;
+  color: #ff9666;
 }
 #section-2 {
   background-color: #f5e9be;

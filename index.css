@@ -18,9 +18,10 @@ html,
 body {
   height: 100%;
 }
-.slide {
+section {
   z-index: 2;
   position: relative;
+  padding: 50px 0;
 }
 #section-1 {
   height: 100%;
@@ -28,6 +29,7 @@ body {
   background-repeat: repeat;
   background-color: #207178;
   background-attachment: fixed;
+  padding: 0;
 }
 #section-1 .flex {
   position: fixed;
@@ -87,7 +89,6 @@ body {
 }
 #section-2 {
   background-color: #f5e9be;
-  padding: 50px 0;
 }
 #section-2 .flex {
   display: -webkit-box;
@@ -127,7 +128,6 @@ body {
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;
   background-color: #174c4f;
-  padding: 50px 0;
   width: 100%;
 }
 #section-3 .flex {
@@ -184,7 +184,6 @@ body {
   background-color: #ff9666;
   color: #f5e9be;
   text-align: center;
-  padding: 50px 0;
 }
 #section-4 a {
   color: #f5e9be;
@@ -235,7 +234,51 @@ body {
 #section-5 {
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;
-  background-color: #207178;
+  background-color: #174c4f;
+  font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #f5e9be;
+  width: 100%;
+}
+#section-5 .flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+#section-5 h3 {
+  line-height: 0;
+  margin-top: 20px;
+  margin-bottom: 55px;
+  color: #207178;
+  text-align: center;
+  font-size: 2em;
+  width: 100%;
+}
+#section-5 h2 {
+  width: 40%;
+}
+#section-5 h2:first-child {
+  text-align: right;
+}
+#section-5 h2:nth-child(2) {
+  margin-left: 20%;
+}
+#section-5 h2:last-child {
+  font-size: 1.1em;
+  text-align: center;
+  width: 100%;
 }
 #section-6 {
   background-color: #ffe184;
@@ -247,4 +290,5 @@ body {
 }
 #section-8 {
   background-color: #f5e9be;
+  padding-bottom: 900px;
 }

@@ -240,6 +240,7 @@ section {
   text-transform: uppercase;
   color: #f5e9be;
   width: 100%;
+  padding: 100px 0;
 }
 #section-5 .flex {
   display: -webkit-box;
@@ -328,6 +329,81 @@ section {
   background-repeat: repeat;
   background-color: #207178;
   width: 100%;
+  min-height: 500px;
+}
+#section-7 .flex {
+  width: 80%;
+  left: 10%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+#section-7 header {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -o-box-flex: 3;
+  -ms-box-flex: 3;
+  box-flex: 3;
+  -webkit-flex-grow: 3;
+  flex-grow: 3;
+}
+#section-7 header:first-child {
+  text-align: right;
+}
+#section-7 header,
+#section-7 .backbone {
+  margin: auto;
+  width: 300px;
+}
+#section-7 .backbone {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 80%;
+}
+#section-7 .backbone .container {
+  background-color: #174c4f;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+#section-7 h1 {
+  font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
+  color: #f5e9be;
+  text-transform: uppercase;
+  font-size: 5em;
+}
+#section-7 h2,
+#section-7 h3 {
+  font-family: 'Inconsolata', 'Monaco', monospace;
+  color: #ffe184;
+  font-size: 1.5em;
+}
+#section-7 h2 {
+  padding-bottom: 5px;
+}
+#section-7 .button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#section-7 .button {
+  background-color: #ffe184;
+  color: #207178;
+  font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
+  text-decoration: none;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  text-align: center;
 }
 #section-8 {
   background-color: #f5e9be;

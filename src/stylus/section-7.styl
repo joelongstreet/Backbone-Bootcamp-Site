@@ -2,3 +2,53 @@
   background-image url('img/paper-texture.png')
   background-repeat repeat
   background-color $color-mid
+  width 100%
+  min-height 500px
+
+  .flex
+    width 80%
+    left 10%
+    height 100%
+    margin auto
+    display flex
+
+  header
+    flex-grow 3
+    &:first-child
+      text-align right
+  header, .backbone
+    margin auto
+    width 300px
+  .backbone
+    flex-grow 1
+    height 80%
+    .container
+      background-color $color-dark
+      width 90%
+      height 100%
+      margin auto
+
+  h1
+    font-family $font-primary
+    color $color-light
+    text-transform uppercase
+    font-size 5em
+  h2, h3
+    font-family $font-tertiary
+    color $color-emphasize
+    font-size 1.5em
+  h2
+    padding-bottom 5px
+
+  .button-container
+    text-align center
+    margin-bottom 20px
+  .button
+    background-color $color-emphasize
+    color $color-mid
+    font-family $font-primary
+    text-decoration none
+    font-size 2.5em
+    text-transform uppercase
+    padding 10px 30px
+    text-align center

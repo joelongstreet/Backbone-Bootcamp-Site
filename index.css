@@ -9,6 +9,10 @@ ul,
 li {
   margin: 0;
   padding: 0;
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
 }
 html,
 body {
@@ -123,6 +127,58 @@ body {
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;
   background-color: #174c4f;
+  padding: 50px 0;
+  width: 100%;
+}
+#section-3 .flex {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+#section-3 .bones {
+  margin: auto;
+  width: 30%;
+  height: 90%;
+  background-color: #f00;
+}
+#section-3 .text {
+  width: 60%;
+}
+#section-3 h2 {
+  font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #207178;
+  margin-bottom: 70px;
+}
+#section-3 li {
+  color: #ffe184;
+  font-family: 'Droid Serif', 'Georgia', 'Times New Roman', serif;
+  font-size: 1.25em;
+  margin-bottom: 75px;
+}
+#section-3 li:before {
+  color: #207178;
+  font-family: 'Inconsolata', 'Monaco', monospace;
+  content: '//';
+  padding-right: 15px;
+  font-size: 1.1em;
+}
+#section-3 li:nth-child(1) {
+  padding-left: 15%;
+}
+#section-3 li:nth-child(2) {
+  padding-left: 10%;
+}
+#section-3 li:nth-child(3) {
+  padding-left: 5%;
+}
+#section-3 li:nth-child(4) {
+  padding-left: 0%;
 }
 #section-4 {
   background-color: #ff9666;

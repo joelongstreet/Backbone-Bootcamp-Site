@@ -8,6 +8,7 @@
   "description": "The marketing web site for backbone bootcamp",
   "license": "MIT",
   "dependencies": {
-    "normalize-css": "~3.0.0"
+    "normalize-css": "~3.0.0",
+    "sticky": "git@github.com:garand/sticky.git"
   }
 }

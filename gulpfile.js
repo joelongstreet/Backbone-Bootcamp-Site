@@ -30,9 +30,17 @@ var compileVendorAssets = function(){
   var vendorCSS = [
     'bower_components/normalize-css/normalize.css'
   ];
+  var vendorJS = [
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/sticky/jquery.sticky.js',
+  ];
 
   gulp.src(vendorCSS)
     .pipe(concat('./vendor.css'))
+    .pipe(gulp.dest('./'));
+
+  gulp.src(vendorJS)
+    .pipe(concat('./vendor.js'))
     .pipe(gulp.dest('./'));
 };
 

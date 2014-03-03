@@ -1,0 +1,12 @@
+{
+  "name": "Backbone-Bootcamp-Site",
+  "version": "0.0.0",
+  "description": "The marketing web site for backbone bootcamp",
+  "main": "gulpfile.js",
+  "author": "Joe Longstreet",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.5.5",
+    "gulp-stylus": "0.0.13"
+  }
+}

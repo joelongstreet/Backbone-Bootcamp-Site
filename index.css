@@ -1,3 +1,15 @@
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
 #section-1 {
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;

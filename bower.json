@@ -1,0 +1,13 @@
+{
+  "name": "Backbone-Bootcamp-Site",
+  "version": "0.0.0",
+  "homepage": "https://github.com/joelongstreet/Backbone-Bootcamp-Site",
+  "authors": [
+    "Joe Longstreet <joelongstreet@gmail.com>"
+  ],
+  "description": "The marketing web site for backbone bootcamp",
+  "license": "MIT",
+  "dependencies": {
+    "normalize-css": "~3.0.0"
+  }
+}

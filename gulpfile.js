@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var concat = require('gulp-concat');
 var stylus = require('gulp-stylus');
 
 
@@ -25,15 +26,29 @@ var compileStylus = function(){
 };
 
 
+var compileVendorAssets = function(){
+  var vendorCSS = [
+    'bower_components/normalize-css/normalize.css'
+  ];
+
+  gulp.src(vendorCSS)
+    .pipe(concat('./vendor.css'))
+    .pipe(gulp.dest('./'));
+};
+
+
 gulp.task('default', function(){
 
   var stylusWatcher = gulp.watch('./src/stylus/*');
   stylusWatcher.on('change', compileStylus);
 
-  var assetWatcher = gulp.watch(['./index.css', './index.html']);
+  var assetWatcher = gulp.watch(['./index.css', './vendor.css', './index.html']);
   assetWatcher.on('change', function(file){
     lr.changed({
       body : { files : './index.html' }
     });
   });
+
+  compileStylus();
+  compileVendorAssets();
 });

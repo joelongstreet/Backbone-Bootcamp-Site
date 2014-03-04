@@ -1,5 +1,6 @@
 var $skeletor = null;
 var $skeletorParts = null;
+var props = {};
 var watchers = {};
 
 
@@ -10,18 +11,23 @@ $(function(){
   $('#section-7').sticky();
 
 
-  // Setup skeletor
-  $skeletor = $('.skeletor');
-  $skeletorParts = $skeletor.find('img');
+  // Setup section props
+  var $sections = $('section');
+  $sections.each(function(index, item){
+    var propName = 'section' + (index + 1);
+    props[propName] = {};
+  });
+
+  props['section1'].$skeletor = $('.skeletor');
+  props['section1'].$skeletorParts = $('.skeletor').find('img');
 
 
   // Set up scrolling and make active when
   // items enter viewport
-  var $sections = $('section');
   $(window).scroll(function(){
     $sections.each(function(index, item){
       if(inViewport(item)){
-        var methodName = 'section' + index;
+        var methodName = 'section' + (index + 1);
         if(watchers[methodName])
           watchers[methodName]();
       }
@@ -33,6 +39,8 @@ $(function(){
 
 watchers.section1 = function(){
   var scrollPosition = $(window).scrollTop();
+  var $skeletor = props['section1'].$skeletor;
+  var $skeletorParts = props['section1'].$skeletorParts;
 
   // Set the bone parts
   $.each($skeletorParts, function(index, item){

@@ -50,7 +50,7 @@ gulp.task('default', function(){
   var stylusWatcher = gulp.watch('./src/stylus/*');
   stylusWatcher.on('change', compileStylus);
 
-  var assetWatcher = gulp.watch(['./index.css', './vendor.css', './index.html']);
+  var assetWatcher = gulp.watch(['./index.css', './index.js', './vendor.css', './index.html']);
   assetWatcher.on('change', function(file){
     lr.changed({
       body : { files : './index.html' }

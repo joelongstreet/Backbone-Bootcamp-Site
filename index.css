@@ -89,6 +89,17 @@ section {
 }
 #section-2 {
   background-color: #f5e9be;
+  overflow: hidden;
+}
+#section-2 .bones {
+  position: absolute;
+  right: 50px;
+  width: 9%;
+  height: 100%;
+}
+#section-2 .bones img {
+  width: 100%;
+  display: block;
 }
 #section-2 .flex {
   display: -webkit-box;

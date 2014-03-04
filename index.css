@@ -82,10 +82,12 @@ section {
   color: #ffe184;
   text-transform: uppercase;
   font-size: 5em;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.5);
 }
 #section-1 h2 {
   font-family: 'Inconsolata', 'Monaco', monospace;
   color: #ff9666;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.25);
 }
 #section-2 {
   background-color: #f5e9be;
@@ -122,18 +124,21 @@ section {
   font-family: 'Droid Serif', 'Georgia', 'Times New Roman', serif;
   color: #207178;
   font-size: 2.5em;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.15);
 }
 #section-2 h2 .emphasize {
   font-size: 2em;
   color: #ff9666;
   font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
   text-transform: uppercase;
+  text-shadow: 0 2px 0px #fff;
 }
 #section-2 p {
   color: #ff9666;
   font-family: 'Inconsolata', 'Monaco', monospace;
   font-size: 2em;
   margin-left: 30%;
+  text-shadow: 0 1px 0px rgba(255,255,255,0.75);
 }
 #section-3 {
   background-image: url("img/paper-texture.png");
@@ -165,6 +170,7 @@ section {
   text-transform: uppercase;
   color: #207178;
   margin-bottom: 70px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 #section-3 li {
   color: #ffe184;
@@ -215,6 +221,7 @@ section {
 #section-4 h3 {
   font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
   text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.25);
 }
 #section-4 h4 {
   font-size: 2em;
@@ -224,11 +231,15 @@ section {
   display: inline-block;
   padding: 5px 15px;
   margin-bottom: 30px;
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5);
+  text-shadow: 0 1px 0px #fff;
 }
 #section-4 h5 {
   font-family: 'Droid Serif', 'Georgia', 'Times New Roman', serif;
   font-size: 2em;
   margin-bottom: 10px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.15);
 }
 #section-4 ul {
   font-family: 'Inconsolata', 'Monaco', monospace;
@@ -238,6 +249,15 @@ section {
 }
 #section-4 li a {
   padding: 5px;
+  -webkit-transition: 0.25s ease-out;
+  -moz-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
+  -ms-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+#section-4 li a:hover {
+  text-shadow: 0 1px 1px rgba(255,255,255,0.25);
 }
 #section-4 .bones {
   height: 300px;
@@ -277,9 +297,11 @@ section {
   text-align: center;
   font-size: 2em;
   width: 100%;
+  text-shadow: 0 0 5px rgba(0,0,0,0.25);
 }
 #section-5 h2 {
   width: 40%;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.25);
 }
 #section-5 h2:first-child {
   text-align: right;
@@ -302,12 +324,14 @@ section {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
+  text-shadow: 0 1px 0 #fff;
 }
 #section-6 h3 {
   color: #207178;
   font-family: 'Droid Serif', 'Georgia', 'Times New Roman', serif;
   font-size: 2em;
   text-align: center;
+  text-shadow: 0 1px 0 #fff;
 }
 #section-6 ul {
   overflow: hidden;
@@ -334,6 +358,8 @@ section {
   margin: 0 auto 30px;
   background-color: #001e7b;
   padding: 20px;
+  -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.5), 0 1px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.5), 0 1px 20px rgba(0,0,0,0.25);
 }
 #section-7 {
   background-image: url("img/paper-texture.png");
@@ -392,6 +418,7 @@ section {
   color: #f5e9be;
   text-transform: uppercase;
   font-size: 5em;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.5);
 }
 #section-7 h2,
 #section-7 h3 {
@@ -415,6 +442,16 @@ section {
   text-transform: uppercase;
   padding: 10px 30px;
   text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  -webkit-transition: 0.25s ease-out;
+  -moz-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
+  -ms-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+#section-7 .button:hover {
+  -webkit-box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 #section-8 {
   background-color: #f5e9be;
@@ -429,6 +466,7 @@ section {
   color: #ff9666;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-shadow: 0 1px 0 #fff;
 }
 #section-8 li {
   font-size: 1.75em;
@@ -446,6 +484,7 @@ section {
 #section-8 span a {
   text-decoration: none;
   color: #f5e9be;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.25);
 }
 #section-8 a {
   color: #ff9666;

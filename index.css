@@ -22,6 +22,7 @@ section {
   z-index: 2;
   position: relative;
   padding: 50px 0;
+  overflow-x: hidden;
 }
 #section-1 {
   height: 100%;
@@ -343,11 +344,14 @@ section {
   margin: 0 auto 25px;
   display: inline-block;
 }
+#section-7-sticky-wrapper {
+  height: 100% !important;
+}
 #section-7 {
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;
   background-color: #207178;
-  min-height: 1200px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
 }
@@ -396,6 +400,7 @@ section {
 #section-7 .button-container {
   text-align: center;
   margin-bottom: 20px;
+  margin-top: -200px;
 }
 #section-7 .button {
   background-color: #ffe184;

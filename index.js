@@ -158,6 +158,7 @@ watchers.section6 = function(opts, scrollPosition){
 watchers.section7 = function(opts, scrollPosition){
   var bounds = opts.$section[0].getBoundingClientRect();
   var offset = bounds.top/3;
+  var buttonOffset = -1*bounds.top*2;
 
   if(offset < 0) offset = 0;
 
@@ -169,7 +170,7 @@ watchers.section7 = function(opts, scrollPosition){
   });
 
   opts.$skeletor.css('transform', 'translateY(' + offset + 'px)');
-  opts.$button.css('transform', 'translateY(' + -1*offset*3 + 'px)');
+  opts.$button.css('transform', 'translateY(' + buttonOffset + 'px)');
 };
 
 

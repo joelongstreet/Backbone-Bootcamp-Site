@@ -42,6 +42,13 @@ $(function(){
     $h4 : $('#section-4').find('h4')
   };
 
+  props['section5'] = {
+    $section : $('#section-5'),
+    $coffee : $('#section-5').find('.coffee'),
+    $lunch : $('#section-5').find('.lunch'),
+    $collaboration : $('#section-5').find('.collaboration')
+  };
+
   // Set up scrolling and make active when
   // items enter viewport
   $(window).scroll(function(){
@@ -114,6 +121,16 @@ watchers.section4 = function(opts, scrollPosition){
   opts.$bone1.css('transform', 'translateX(' + offset + 'px)');
   opts.$bone2.css('transform', 'translateX(' + -1*offset + 'px)');
   opts.$h4.css('transform', 'scale(' + zoom + ')');
+};
+
+
+watchers.section5 = function(opts, scrollPosition){
+  var bounds = opts.$section[0].getBoundingClientRect();
+  var offset = bounds.top/2;
+
+  opts.$coffee.css('transform', 'translateX(' + -1*offset + 'px)');
+  opts.$lunch.css('transform', 'translateX(' + offset + 'px)');
+  opts.$collaboration.css('transform', 'translateY(' + offset + 'px)');
 };
 
 

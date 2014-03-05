@@ -274,6 +274,15 @@ section {
 }
 #section-4 .bones {
   height: 300px;
+  margin: auto;
+  width: 180px;
+}
+#section-4 img {
+  display: block;
+  width: 100%;
+}
+#section-4 img:last-child {
+  margin-left: -15px;
 }
 #section-5 {
   background-image: url("img/paper-texture.png");

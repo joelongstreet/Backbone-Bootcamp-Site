@@ -35,6 +35,13 @@ $(function(){
     $headline : $('#section-3').find('h2')
   };
 
+  props['section4'] = {
+    $section : $('#section-4'),
+    $bone1 : $('#section-4').find('.bone-1'),
+    $bone2 : $('#section-4').find('.bone-2'),
+    $h4 : $('#section-4').find('h4')
+  };
+
   // Set up scrolling and make active when
   // items enter viewport
   $(window).scroll(function(){
@@ -94,6 +101,19 @@ watchers.section3 = function(opts, scrollPosition){
 
   opts.$boneWrapper.css('transform', 'translateY(' + offset + 'px)');
   opts.$headline.css('transform', 'translateX(' + offset + 'px)');
+};
+
+
+watchers.section4 = function(opts, scrollPosition){
+  var bounds = opts.$section[0].getBoundingClientRect();
+  var offset = bounds.top/1.5;
+  var zoom = bounds.bottom/750;
+
+  if(zoom < 1) zoom = 1;
+
+  opts.$bone1.css('transform', 'translateX(' + offset + 'px)');
+  opts.$bone2.css('transform', 'translateX(' + -1*offset + 'px)');
+  opts.$h4.css('transform', 'scale(' + zoom + ')');
 };
 
 

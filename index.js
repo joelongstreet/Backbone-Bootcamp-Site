@@ -15,8 +15,8 @@ $(function(){
   var $sections = $('section');
 
   props['section1'] = {
-    $skeletor : $('.skeletor'),
-    $skeletorParts : $('.skeletor').find('img')
+    $skeletor : $('#section-1').find('.skeletor'),
+    $skeletorParts : $('#section-1').find('img')
   };
 
   props['section2'] = {
@@ -54,6 +54,13 @@ $(function(){
     $items : $('#section-6').find('li')
   };
 
+  props['section7'] = {
+    $section : $('#section-7'),
+    $skeletor : $('#section-7').find('.skeletor'),
+    $skeletorParts : $('#section-7').find('img'),
+    $button : $('#section-7').find('.button-container')
+  };
+
   // Set up scrolling and make active when
   // items enter viewport
   $(window).scroll(function(){
@@ -73,14 +80,12 @@ $(function(){
 
 
 watchers.section1 = function(opts, scrollPosition){
-  // Set the bone parts
   $.each(opts.$skeletorParts, function(index, item){
     var reverseIndex = opts.$skeletorParts.length - index;
     var itemVal = -1*(reverseIndex * scrollPosition/10);
     $(item).css('transform', 'translateY(' + itemVal + 'px)');
   });
 
-  // Move ther wrapper around for better visuals
   var wrapperVal = scrollPosition/10;
   opts.$skeletor.css('transform', 'translateY(' + wrapperVal + 'px)');
 };
@@ -147,6 +152,24 @@ watchers.section6 = function(opts, scrollPosition){
     var adjustedOffset = index%2 ? -1*offset : offset;
     $(item).css('transform', 'translateX(' + adjustedOffset + 'px)');
   });
+};
+
+
+watchers.section7 = function(opts, scrollPosition){
+  var bounds = opts.$section[0].getBoundingClientRect();
+  var offset = bounds.top/3;
+
+  if(offset < 0) offset = 0;
+
+  $.each(opts.$skeletorParts, function(index, item){
+    var reverseIndex = opts.$skeletorParts.length - index;
+    var itemVal = -1*(reverseIndex * offset);
+
+    $(item).css('transform', 'translateY(' + itemVal + 'px)');
+  });
+
+  opts.$skeletor.css('transform', 'translateY(' + offset + 'px)');
+  opts.$button.css('transform', 'translateY(' + -1*offset*3 + 'px)');
 };
 
 

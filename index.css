@@ -52,30 +52,11 @@ section {
   box-flex: 3;
   -webkit-flex-grow: 3;
   flex-grow: 3;
-}
-#section-1 header:first-child {
-  text-align: right;
-}
-#section-1 header,
-#section-1 .backbone {
   margin: auto;
   width: 300px;
 }
-#section-1 .backbone {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -o-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  height: 80%;
-}
-#section-1 .backbone .container {
-  background-color: #174c4f;
-  width: 90%;
-  height: 100%;
-  margin: auto;
+#section-1 header:first-child {
+  text-align: right;
 }
 #section-1 h1 {
   font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
@@ -377,8 +358,9 @@ section {
   background-image: url("img/paper-texture.png");
   background-repeat: repeat;
   background-color: #207178;
+  min-height: 1200px;
   width: 100%;
-  min-height: 500px;
+  overflow: hidden;
 }
 #section-7 .flex {
   width: 80%;
@@ -400,30 +382,11 @@ section {
   box-flex: 3;
   -webkit-flex-grow: 3;
   flex-grow: 3;
-}
-#section-7 header:first-child {
-  text-align: right;
-}
-#section-7 header,
-#section-7 .backbone {
   margin: auto;
   width: 300px;
 }
-#section-7 .backbone {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -o-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
-  height: 80%;
-}
-#section-7 .backbone .container {
-  background-color: #174c4f;
-  width: 90%;
-  height: 100%;
-  margin: auto;
+#section-7 header:first-child {
+  text-align: right;
 }
 #section-7 h1 {
   font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;

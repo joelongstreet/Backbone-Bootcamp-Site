@@ -2,8 +2,9 @@
   background-image url('img/paper-texture.png')
   background-repeat repeat
   background-color $color-mid
+  min-height 1200px
   width 100%
-  min-height 500px
+  overflow hidden
 
   .flex
     width 80%
@@ -14,19 +15,10 @@
 
   header
     flex-grow 3
-    &:first-child
-      text-align right
-  header, .backbone
     margin auto
     width 300px
-  .backbone
-    flex-grow 1
-    height 80%
-    .container
-      background-color $color-dark
-      width 90%
-      height 100%
-      margin auto
+    &:first-child
+      text-align right
 
   h1
     font-family $font-primary

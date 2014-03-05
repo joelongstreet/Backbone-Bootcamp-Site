@@ -157,10 +157,22 @@ section {
   display: flex;
 }
 #section-3 .bones {
-  margin: auto;
-  width: 30%;
+  margin: 30px auto auto 70px;
+  width: 15%;
   height: 90%;
-  background-color: #f00;
+}
+#section-3 .bones img {
+  width: 100%;
+}
+#section-3 .bones img:nth-child(2) {
+  width: 80%;
+  margin-top: -25px;
+}
+#section-3 .bones img:nth-child(3) {
+  margin-top: 20px;
+}
+#section-3 .bones img:nth-child(even) {
+  margin-left: 110px;
 }
 #section-3 .text {
   width: 60%;
@@ -169,9 +181,9 @@ section {
   font-family: 'Fjalla One', 'Helvetica', 'Arial', sans-serif;
   font-size: 3em;
   text-transform: uppercase;
-  color: #207178;
+  color: #f5e9be;
   margin-bottom: 70px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  text-shadow: 1px 1px 2px #000;
 }
 #section-3 li {
   color: #ffe184;

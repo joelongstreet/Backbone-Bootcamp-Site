@@ -9,10 +9,19 @@
     display flex
 
   .bones
-    margin auto
-    width 30%
+    margin 30px auto auto 70px
+    width 15%
     height 90%
-    background-color red
+    img
+      width 100%
+      &:nth-child(2)
+        width 80%
+        margin-top -25px
+      &:nth-child(3)
+        margin-top 20px
+      &:nth-child(even)
+        margin-left 110px
+        
   .text
     width 60%
 
@@ -20,9 +29,9 @@
     font-family $font-primary
     font-size 3em
     text-transform uppercase
-    color $color-mid
+    color $color-light
     margin-bottom 70px
-    text-shadow 0 1px 3px rgba(0,0,0,.25)
+    text-shadow 1px 1px 2px black
 
   li
     color $color-emphasize

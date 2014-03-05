@@ -13,19 +13,27 @@ $(function(){
 
   // Setup section props
   var $sections = $('section');
-  $sections.each(function(index, item){
-    var propName = 'section' + (index + 1);
-    props[propName] = {};
-  });
 
-  props['section1'].$skeletor = $('.skeletor');
-  props['section1'].$skeletorParts = $('.skeletor').find('img');
-  props['section2'].$section = $('#section-2');
-  props['section2'].$bone1 = $('#section-2').find('.bone-1');
-  props['section2'].$bone2 = $('#section-2').find('.bone-2');
-  props['section2'].$headline = $('#section-2').find('h2');
-  props['section2'].$copy = $('#section-2').find('p');
+  props['section1'] = {
+    $skeletor : $('.skeletor'),
+    $skeletorParts : $('.skeletor').find('img')
+  };
 
+  props['section2'] = {
+    $section : $('#section-2'),
+    $bone1 : $('#section-2').find('.bone-1'),
+    $bone2 : $('#section-2').find('.bone-2'),
+    $headline : $('#section-2').find('h2'),
+    $copy : $('#section-2').find('p')
+  };
+
+  props['section3'] = {
+    $section : $('#section-3'),
+    $textItems : $('#section-3').find('li'),
+    $bones : $('#section-3').find('img'),
+    $boneWrapper : $('#section-3').find('.bones'),
+    $headline : $('#section-3').find('h2')
+  };
 
   // Set up scrolling and make active when
   // items enter viewport
@@ -34,7 +42,10 @@ $(function(){
       if(inViewport(item)){
         var methodName = 'section' + (index + 1);
         if(watchers[methodName])
-          watchers[methodName]($(window).scrollTop());
+          watchers[methodName](
+            props[methodName],
+            $(window).scrollTop()
+          );
       }
     });
   });
@@ -42,40 +53,48 @@ $(function(){
 
 
 
-watchers.section1 = function(scrollPosition){
-  var $skeletor = props['section1'].$skeletor;
-  var $skeletorParts = props['section1'].$skeletorParts;
-
+watchers.section1 = function(opts, scrollPosition){
   // Set the bone parts
-  $.each($skeletorParts, function(index, item){
-    var reverseIndex = $skeletorParts.length - index;
+  $.each(opts.$skeletorParts, function(index, item){
+    var reverseIndex = opts.$skeletorParts.length - index;
     var itemVal = -1*(reverseIndex * scrollPosition/10);
     $(item).css('transform', 'translateY(' + itemVal + 'px)');
   });
 
   // Move ther wrapper around for better visuals
   var wrapperVal = scrollPosition/10;
-  $skeletor.css('transform', 'translateY(' + wrapperVal + 'px)');
+  opts.$skeletor.css('transform', 'translateY(' + wrapperVal + 'px)');
 };
 
 
-watchers.section2 = function(scrollPosition){
-  var $section = props['section2'].$section;
-  var $bone1 = props['section2'].$bone1;
-  var $bone2 = props['section2'].$bone2;
-  var $headline = props['section2'].$headline;
-  var $copy = props['section2'].$copy;
-  var bounds = $section[0].getBoundingClientRect();
+watchers.section2 = function(opts, scrollPosition){
+  var bounds = opts.$section[0].getBoundingClientRect();
 
   var boneOffset = bounds.top/10;
-  $bone1.css('transform', 'translateY(' + -1*boneOffset + 'px)');
-  $bone2.css('transform', 'translateY(' + boneOffset + 'px)');
+  opts.$bone1.css('transform', 'translateY(' + -1*boneOffset + 'px)');
+  opts.$bone2.css('transform', 'translateY(' + boneOffset + 'px)');
 
   var headlineOffset = bounds.top/5;
-  $headline.css('transform', 'translateX(' + headlineOffset + 'px)');
-  $copy.css('transform', 'translateX(' + -1*headlineOffset + 'px)');
+  opts.$headline.css('transform', 'translateX(' + headlineOffset + 'px)');
+  opts.$copy.css('transform', 'translateX(' + -1*headlineOffset + 'px)');
 };
 
+
+watchers.section3 = function(opts, scrollPosition){
+  var bounds = opts.$section[0].getBoundingClientRect();
+  var offset = bounds.top/5;
+
+  opts.$textItems.each(function(index, item){
+    $(item).css('transform', 'translateX(' + offset*index + 'px)');
+  });
+
+  opts.$bones.each(function(index, item){
+    $(item).css('transform', 'translateY(' + offset*index + 'px)');
+  });
+
+  opts.$boneWrapper.css('transform', 'translateY(' + offset + 'px)');
+  opts.$headline.css('transform', 'translateX(' + offset + 'px)');
+};
 
 
 var inViewport = function(el){

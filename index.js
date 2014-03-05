@@ -123,8 +123,8 @@ watchers.section4 = function(opts, scrollPosition){
 
   if(zoom < 1) zoom = 1;
 
-  opts.$bone1.css('transform', 'translateX(' + offset + 'px)');
-  opts.$bone2.css('transform', 'translateX(' + -1*offset + 'px)');
+  opts.$bone1.css('transform', 'translateX(' + offset + 'px) rotate(' +  offset + 'deg)');
+  opts.$bone2.css('transform', 'translateX(' + -1*offset + 'px) rotate(' + -1*offset +'deg)');
   opts.$h4.css('transform', 'scale(' + zoom + ')');
 };
 

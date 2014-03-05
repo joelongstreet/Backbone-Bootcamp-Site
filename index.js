@@ -21,8 +21,8 @@ $(function(){
 
   props['section2'] = {
     $section : $('#section-2'),
-    $bone1 : $('#section-2').find('.bone-1'),
-    $bone2 : $('#section-2').find('.bone-2'),
+    // $bone1 : $('#section-2').find('.bone-1'),
+    // $bone2 : $('#section-2').find('.bone-2'),
     $headline : $('#section-2').find('h2'),
     $copy : $('#section-2').find('p')
   };
@@ -94,9 +94,9 @@ watchers.section1 = function(opts, scrollPosition){
 watchers.section2 = function(opts, scrollPosition){
   var bounds = opts.$section[0].getBoundingClientRect();
 
-  var boneOffset = bounds.top/10;
-  opts.$bone1.css('transform', 'translateY(' + -1*boneOffset + 'px)');
-  opts.$bone2.css('transform', 'translateY(' + boneOffset + 'px)');
+  // var boneOffset = bounds.top/10;
+  // opts.$bone1.css('transform', 'translateY(' + -1*boneOffset + 'px)');
+  // opts.$bone2.css('transform', 'translateY(' + boneOffset + 'px)');
 
   var headlineOffset = bounds.top/5;
   opts.$headline.css('transform', 'translateX(' + headlineOffset + 'px)');

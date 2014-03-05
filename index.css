@@ -359,29 +359,19 @@ section {
   overflow: hidden;
   width: auto;
   margin: auto;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -o-box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 #section-6 li {
   font-family: 'Inconsolata', 'Monaco', monospace;
   color: #ff9666;
   font-size: 1.75em;
-  display: inline-block;
-  margin: 0 auto 30px;
+  display: block;
+  text-align: center;
+}
+#section-6 li span {
   background-color: #001e7b;
   padding: 20px;
-  -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.5), 0 1px 20px rgba(0,0,0,0.25);
-  box-shadow: 0 2px 0 rgba(0,0,0,0.5), 0 1px 20px rgba(0,0,0,0.25);
+  margin: 0 auto 25px;
+  display: inline-block;
 }
 #section-7 {
   background-image: url("img/paper-texture.png");

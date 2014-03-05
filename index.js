@@ -49,6 +49,11 @@ $(function(){
     $collaboration : $('#section-5').find('.collaboration')
   };
 
+  props['section6'] = {
+    $section : $('#section-6'),
+    $items : $('#section-6').find('li')
+  };
+
   // Set up scrolling and make active when
   // items enter viewport
   $(window).scroll(function(){
@@ -131,6 +136,17 @@ watchers.section5 = function(opts, scrollPosition){
   opts.$coffee.css('transform', 'translateX(' + -1*offset + 'px)');
   opts.$lunch.css('transform', 'translateX(' + offset + 'px)');
   opts.$collaboration.css('transform', 'translateY(' + offset + 'px)');
+};
+
+
+watchers.section6 = function(opts, scrollPosition){
+  var bounds = opts.$section[0].getBoundingClientRect();
+  var offset = bounds.top/3;
+
+  opts.$items.each(function(index, item){
+    var adjustedOffset = index%2 ? -1*offset : offset;
+    $(item).css('transform', 'translateX(' + adjustedOffset + 'px)');
+  });
 };
 
 
